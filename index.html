@@ -27,6 +27,7 @@ function onMapClick(e) {
         .setContent("You clicked the map at " + e.latlng.toString())
         .openOn(mymap);
 }
+	    
 mymap.on('click', onMapClick);
 	    var marker = L.marker([51.12983, -2.73341]).addTo(mymap);
 	    marker.bindPopup("<img style='width: 200px' src='ITandComputers.jpg'><p><b>C Block</b></p><br>T-Level Digital");
