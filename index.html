@@ -33,17 +33,7 @@
 	    var marker2 = L.marker([51.12930, -2.73296]).addTo(mymap);
 	    marker2.bindPopup("<img style='width: 200px' src='Swimming-Pool.jpg'><p><b>Swimming Pool</b></p><br>Swimming Pool");
 	    //marker.bindPopup("<b>C Block</b><br>T-Level Digital").openPopup();
-	     var marker3 = L.marker([64.96076, -18.65476]).addTo(mymap);
-	    marker3.bindPopup("<img style='width: 200px' src='Iceland.jpg'><p><b>Island</b></p><br>Island");
-	    	    var circle = L.circle([64.96076, -18.65476], {
-    color: 'blue',
-    fillColor: '#00F7FF',
-    fillOpacity: 0.5,
-    radius: 8000
-}).addTo(mymap);
-	    
-	    var popup = L.popup();
-
+	 
 function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
