@@ -19,9 +19,13 @@
       
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	  	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(mymap);
-	    function onMapClick(e) {
-    alert("You clicked the map at " + e.latlng);
+  var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
 }
 mymap.on('click', onMapClick);
 	    var marker = L.marker([51.12983, -2.73341]).addTo(mymap);
