@@ -26,6 +26,16 @@
 	    marker1.bindPopup("<img style='width: 200px' src='Engineering.jfif'><p><b>C Block</b></p><br>Engineering");
 	    //marker.bindPopup("<b>C Block</b><br>T-Level Digital").openPopup();
 	    
+	    var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
+}
+
+mymap.on('click', onMapClick);
 	    mymap.addControl(new L.Control.Fullscreen());
     </script>
   </body>    
